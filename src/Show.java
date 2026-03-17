@@ -20,7 +20,10 @@ public class Show {
 
     public void addActor(Actor actor) {
         for (Actor actors: listOfActors) {
-            if (actors.equals(actor)){return;}
+            if (actors.equals(actor)){
+                System.out.println("Такой актер уже есть в списке");
+                return;
+            }
         }
         listOfActors.add(actor);
     }
