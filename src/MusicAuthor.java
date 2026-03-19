@@ -6,6 +6,6 @@ public class MusicAuthor extends Person {
 
     @Override
     public String toString() {
-        return "Автор музыки - " + name + " " + surname;
+        return "Автор музыки - " + super.toString();
     }
 }
