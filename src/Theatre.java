@@ -43,11 +43,11 @@ public class Theatre {
         opera.printListOfActors();
 
         //замена актера, который есть в списке
-        ballet.swapActor(actor3, actor1);
+        ballet.swapActor(actor3.getSurname(), actor1);
         ballet.printListOfActors();
 
         //замена актера, которого нет в списке
-        opera.swapActor(actor2, actor1);
+        opera.swapActor(actor2.getSurname(), actor1);
         opera.printListOfActors();
 
         //Текст либретто

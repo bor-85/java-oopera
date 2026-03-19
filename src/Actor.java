@@ -12,17 +12,19 @@ public class Actor extends Person {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
         Actor actor = (Actor) o;
-        return Objects.equals(this.name, actor.name) && Objects.equals(this.surname, actor.surname) && Objects.equals(this.height, actor.height);
+        return Objects.equals(this.height, actor.height);
     }
 
     @Override
     public String toString() {
-        return name + " " + surname + "(" + height + ")";
+        return super.toString() + "(" + height + ")";
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, height);
+        return Objects.hash(super.hashCode(), height);
     }
+
 }
